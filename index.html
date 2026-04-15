@@ -38,9 +38,36 @@
         .map-popup { font-family: 'Montserrat', sans-serif; font-size: 13px; line-height: 1.5; color: #000; }
         .map-popup strong { font-size: 14px; display: block; margin-bottom: 4px; }
         @media (max-width: 600px) { .properties { padding: 30px 16px 60px; gap: 30px; } .property-card { width: 100%; } .property-card .image-container { height: 240px; } .property-card .property-title { font-size: 22px; } }
+    
+        /* Filter Bar */
+        .filter-bar { max-width: 1200px; margin: 0 auto; padding: 30px 20px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; }
+        .filter-bar input, .filter-bar select { padding: 10px 14px; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 300; letter-spacing: 1px; border-radius: 0; min-width: 110px; }
+        .filter-bar input::placeholder { color: rgba(255,255,255,0.45); }
+        .filter-bar input:focus, .filter-bar select:focus { outline: none; border-color: #fff; }
+        .filter-bar button { padding: 10px 20px; background: transparent; border: 1px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.8); font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; }
+        .filter-bar button:hover { background: #fff; color: #000; border-color: #fff; }
+        .filter-count { text-align: center; color: rgba(255,255,255,0.6); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding-bottom: 20px; }
+        @media (max-width: 600px) { .filter-bar input, .filter-bar select { min-width: 0; flex: 1 1 45%; } }
+
     </style>
 </head>
 <body>
+    <div class="filter-bar">
+        <input type="number" id="f-beds" placeholder="Min Beds" min="1" step="1">
+        <input type="number" id="f-baths" placeholder="Min Baths" min="1" step="0.1">
+        <input type="number" id="f-sqft-min" placeholder="Min SqFt" min="0" step="100">
+        <input type="number" id="f-sqft-max" placeholder="Max SqFt" min="0" step="100">
+        <input type="number" id="f-price-min" placeholder="Min Price ($M)" min="0" step="0.1">
+        <input type="number" id="f-price-max" placeholder="Max Price ($M)" min="0" step="0.1">
+        <select id="f-city"><option value="">Any City</option></select>
+        <select id="f-area"><option value="">Any Area</option></select>
+        <button id="f-clear">Clear</button>
+    </div>
+    <div class="filter-count" id="filter-count"></div>
+    <div class="map-section">
+        <h2 class="map-title">Property Locations</h2>
+        <div id="map"></div>
+    </div>
     <div class="properties">
 
         <!-- 714 Shawnee Dr -->
@@ -895,10 +922,6 @@
         </div>
 
     </div>
-    <div class="map-section">
-        <h2 class="map-title">Property Locations</h2>
-        <div id="map"></div>
-    </div>
     <div class="footer">
         <p>Stonehouse Realty Co. &bull; Confidential &bull; Not for Public Distribution</p>
     </div>
@@ -967,6 +990,122 @@
         properties.forEach(function(p) { L.marker([p.lat, p.lng], { icon: whiteIcon }).addTo(map).bindPopup('<div class="map-popup"><strong>' + p.title + '</strong>' + p.details + '</div>'); });
         var group = L.featureGroup(properties.map(function(p) { return L.marker([p.lat, p.lng]); }));
         map.fitBounds(group.getBounds().pad(0.15));
+
+        // === Property Filter ===
+        (function() {
+            var cards = document.querySelectorAll('.property-card');
+            var citySelect = document.getElementById('f-city');
+            var countEl = document.getElementById('filter-count');
+
+            // Parse each card's data once
+            var cardData = Array.from(cards).map(function(card) {
+                var specs = (card.querySelector('.property-specs') || {}).textContent || '';
+                var price = (card.querySelector('.property-price') || {}).textContent || '';
+                var addr = (card.querySelector('.property-address') || {}).textContent || '';
+
+                // Beds
+                var bedMatch = specs.match(/(\d+)\s*BD/i);
+                var beds = bedMatch ? parseInt(bedMatch[1], 10) : null;
+
+                // Baths - handle "5.1 BA", "6 FB + 2 HB", "7.2 BA", "2 HB", "9 BA"
+                var baths = null;
+                var fbMatch = specs.match(/(\d+)\s*FB/i);
+                var hbMatch = specs.match(/(\d+)\s*HB/i);
+                var baMatch = specs.match(/([\d.]+)\s*BA/i);
+                if (fbMatch || hbMatch) {
+                    baths = (fbMatch ? parseInt(fbMatch[1], 10) : 0) + (hbMatch ? 0.1 * parseInt(hbMatch[1], 10) : 0);
+                } else if (baMatch) {
+                    baths = parseFloat(baMatch[1]);
+                }
+
+                // SqFt - handle "5,000", "6,369", "12,000+", "5,000+", "12,000+/-"
+                var sfMatch = specs.match(/([\d,]+)\+?\/?-?\s*SF/i);
+                var sqft = sfMatch ? parseInt(sfMatch[1].replace(/,/g, ''), 10) : null;
+
+                // Price in millions - match $X.XM or $X,XXX,XXX or $XM
+                var priceNum = null;
+                var pmMatch = price.match(/\$([\d.]+)M/);
+                if (pmMatch) priceNum = parseFloat(pmMatch[1]);
+
+                // City
+                var city = '';
+                var cityMatch = addr.match(/,\s*([A-Za-z ]+?),\s*TN/);
+                if (cityMatch) city = cityMatch[1].trim();
+
+                // Area — look for "Area: XYZ" in italic note or data-area attribute
+                var area = '';
+                var areaMatch = card.innerHTML.match(/Area:\s*([^<\n]+)/i);
+                if (areaMatch) area = areaMatch[1].trim();
+                return { el: card, beds: beds, baths: baths, sqft: sqft, price: priceNum, city: city, area: area };
+            });
+
+            // Populate city dropdown
+            var cities = [...new Set(cardData.map(function(c) { return c.city; }).filter(Boolean))].sort();
+            cities.forEach(function(c) {
+                var opt = document.createElement('option');
+                opt.value = c; opt.textContent = c;
+                citySelect.appendChild(opt);
+            });
+
+            // Populate area dropdown
+            var areaSelect = document.getElementById('f-area');
+            var areas = [...new Set(cardData.map(function(c) { return c.area; }).filter(Boolean))].sort();
+            areas.forEach(function(a) {
+                var opt = document.createElement('option');
+                opt.value = a; opt.textContent = a;
+                areaSelect.appendChild(opt);
+            });
+
+            function val(id) {
+                var e = document.getElementById(id);
+                var v = e && e.value;
+                return v === '' || v == null ? null : parseFloat(v);
+            }
+
+            function applyFilters() {
+                var fBeds = val('f-beds');
+                var fBaths = val('f-baths');
+                var fSqftMin = val('f-sqft-min');
+                var fSqftMax = val('f-sqft-max');
+                var fPriceMin = val('f-price-min');
+                var fPriceMax = val('f-price-max');
+                var fCity = citySelect.value;
+                var fArea = areaSelect.value;
+
+                var visible = 0;
+                cardData.forEach(function(c) {
+                    var show = true;
+                    if (fBeds != null && (c.beds == null || c.beds < fBeds)) show = false;
+                    if (fBaths != null && (c.baths == null || c.baths < fBaths)) show = false;
+                    if (fSqftMin != null && (c.sqft == null || c.sqft < fSqftMin)) show = false;
+                    if (fSqftMax != null && (c.sqft == null || c.sqft > fSqftMax)) show = false;
+                    if (fPriceMin != null && (c.price == null || c.price < fPriceMin)) show = false;
+                    if (fPriceMax != null && (c.price == null || c.price > fPriceMax)) show = false;
+                    if (fCity && c.city !== fCity) show = false;
+                    if (fArea && c.area !== fArea) show = false;
+                    c.el.style.display = show ? '' : 'none';
+                    if (show) visible++;
+                });
+                countEl.textContent = 'Showing ' + visible + ' of ' + cardData.length + ' properties';
+            }
+
+            ['f-beds','f-baths','f-sqft-min','f-sqft-max','f-price-min','f-price-max','f-city','f-area'].forEach(function(id) {
+                var e = document.getElementById(id);
+                if (e) e.addEventListener('input', applyFilters);
+                if (e) e.addEventListener('change', applyFilters);
+            });
+
+            document.getElementById('f-clear').addEventListener('click', function() {
+                ['f-beds','f-baths','f-sqft-min','f-sqft-max','f-price-min','f-price-max'].forEach(function(id) {
+                    var e = document.getElementById(id); if (e) e.value = '';
+                });
+                citySelect.value = '';
+                areaSelect.value = '';
+                applyFilters();
+            });
+
+            applyFilters();
+        })();
     </script>
 </body>
 </html>
