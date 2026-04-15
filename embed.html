@@ -9,20 +9,13 @@
     <meta property="og:image" content="https://theshepherdgroupadmin-cmd.github.io/platinum-reserve/3720ben.png">
     <meta property="og:url" content="https://theshepherdgroupadmin-cmd.github.io/platinum-reserve/">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Platinum Reserve | Off-Market Properties">
-    <meta name="twitter:description" content="Exclusive off-market luxury properties in Nashville, TN curated by Stonehouse Realty Co.">
-    <meta name="twitter:image" content="https://theshepherdgroupadmin-cmd.github.io/platinum-reserve/3720ben.png">
     <meta name="description" content="Exclusive off-market luxury properties in Nashville, TN curated by Stonehouse Realty Co.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: #000000; color: #ffffff; font-family: 'Montserrat', sans-serif; min-height: 100vh; }
-        .header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        .header h1 { font-size: 42px; font-weight: 300; letter-spacing: 8px; text-transform: uppercase; color: #ffffff; margin-bottom: 12px; }
-        .header .subtitle { font-size: 14px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); }
-        .properties { max-width: 1200px; margin: 0 auto; padding: 50px 20px 80px; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
+        .properties { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
         .property-card { width: 520px; background-color: #000000; }
         .property-card .image-container { width: 100%; height: 320px; overflow: hidden; position: relative; }
         .property-card .image-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
@@ -35,7 +28,7 @@
         .property-card .property-specs { font-size: 14px; font-weight: 300; color: rgba(255, 255, 255, 0.85); margin-bottom: 6px; }
         .property-card .property-price { font-size: 14px; font-weight: 700; font-style: italic; color: #ffffff; margin-top: 4px; }
         .property-card .btn-row { display: flex; align-items: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
-        .property-card .plans-btn { display: inline-flex; align-items: center; padding: 10px 24px; border: 1px solid rgba(255, 255, 255, 0.4); background-color: transparent; color: rgba(255, 255, 255, 0.8); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+        .property-card .plans-btn { display: inline-flex; align-items: center; padding: 10px 24px; border: 1px solid rgba(255, 255, 255, 0.4); background-color: transparent; color: rgba(255, 255, 255, 0.8); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.3s ease; }
         .property-card .plans-btn:hover { background-color: #ffffff; color: #000000; border-color: #ffffff; }
         .footer { text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
         .footer p { font-size: 11px; font-weight: 300; letter-spacing: 2px; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; }
@@ -44,505 +37,11 @@
         #map { width: 100%; height: 500px; border: 1px solid rgba(255, 255, 255, 0.15); }
         .map-popup { font-family: 'Montserrat', sans-serif; font-size: 13px; line-height: 1.5; color: #000; }
         .map-popup strong { font-size: 14px; display: block; margin-bottom: 4px; }
-        @media (max-width: 600px) { .header h1 { font-size: 28px; letter-spacing: 4px; } .properties { padding: 30px 16px 60px; gap: 30px; } .property-card { width: 100%; } .property-card .image-container { height: 240px; } .property-card .property-title { font-size: 22px; } }
+        @media (max-width: 600px) { .properties { padding: 30px 16px 60px; gap: 30px; } .property-card { width: 100%; } .property-card .image-container { height: 240px; } .property-card .property-title { font-size: 22px; } }
     </style>
 </head>
 <body>
-    <div class="properties" style="padding-top:30px;">
-
-        <!-- 1211 Jefferson Davis -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_32aeb48aa3d24e66acdd7f2c0b0a364b~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/591155530_18026324219777378_5258489329646174750_n.jpg" alt="1211 Jefferson Davis"></div>
-            <div class="details">
-                <h2 class="property-title">1211 Jefferson Davis</h2>
-                <p class="property-address">1211 Jefferson Davis, Nashville, TN</p>
-                <p class="property-specs">6 BD | 5.3 BA | 7,600 SF | 1.24 AC | Pool</p>
-                <p class="property-price">$5.3M &ndash; Spring 2027</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 4406 Sunnybrook Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_4bdc615e5f674dfaa5e5621fa60e8124~mv2.png/v1/crop/x_92,y_31,w_1162,h_709/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_lf3r9nlf3r9nlf3r.png" alt="4406 Sunnybrook Dr"></div>
-            <div class="details">
-                <h2 class="property-title">4406 Sunnybrook Dr</h2>
-                <p class="property-address">4406 Sunnybrook Dr, Nashville, TN</p>
-                <p class="property-specs">10,000+/- SF | 1.07 AC | Pool</p>
-                <p class="property-price">Price TBD &ndash; Spring 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 515 Shenandoah Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_15ffc52ed7254ee7b275337c48fb3a8f~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/601104295_18027199778777378_4690276583472516587_n.jpg" alt="515 Shenandoah Dr"></div>
-            <div class="details">
-                <h2 class="property-title">515 Shenandoah Dr</h2>
-                <p class="property-address">515 Shenandoah Dr, Brentwood, TN</p>
-                <p class="property-specs">6 BD | 5.3 BA | 8,000 SF | 1.23 AC | Pool</p>
-                <p class="property-price">$4.8M &ndash; Spring 2027</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 6008 Elizabethan Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_10c71c1fa3474234905215d8daa25d9d~mv2.jpeg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image0.jpeg" alt="6008 Elizabethan Dr"></div>
-            <div class="details">
-                <h2 class="property-title">6008 Elizabethan Dr</h2>
-                <p class="property-address">6008 Elizabethan Dr, Nashville, TN 37205</p>
-                <p class="property-specs">5 BD | 9 BA | 8,543 SF | 1.46 AC | Pool</p>
-                <p class="property-price">$7.3M &ndash; Spring 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 750 Templeton Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_a6398b87209740e9912e32310a81a7d9~mv2.webp/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-render-10285042%2B(1).webp" alt="750 Templeton Dr"></div>
-            <div class="details">
-                <h2 class="property-title">750 Templeton Dr</h2>
-                <p class="property-address">750 Templeton Dr, Nashville, TN</p>
-                <p class="property-specs">6 BD | 5.3 BA | 5,474 SF | .97 AC | Pool</p>
-                <p class="property-price">$3.799M &ndash; Spring 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 804 Wilson Pike -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_75ec3f5a50f141859622f4a0d6783b6b~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(4).jpg" alt="804 Wilson Pike"></div>
-            <div class="details">
-                <h2 class="property-title">804 Wilson Pike</h2>
-                <p class="property-address">804 Wilson Pike, Brentwood, TN</p>
-                <p class="property-specs">6 BD | 5.3 BA | 7,300 SF | 1.66 AC | Pool</p>
-                <p class="property-price">$4.7M &ndash; Spring 2027</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 840 Brentview Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_4bc2e0d29e204a4882883e771fac263a~mv2.jpg/v1/crop/x_122,y_0,w_1253,h_767/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1500x1000.jpg" alt="840 Brentview Dr"></div>
-            <div class="details">
-                <h2 class="property-title">840 Brentview Dr</h2>
-                <p class="property-address">840 Brentview Dr, Nashville, TN</p>
-                <p class="property-specs">6 BD | 8 BA | 7,450 SF | 1.05 AC | Pool</p>
-                <p class="property-price">$5.499M &ndash; Spring 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1413 Clifton Ln -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">1413 Clifton Ln</h2>
-                <p class="property-address">1413 Clifton Ln, Nashville, TN 37212</p>
-                <p class="property-specs">4 BD | 4 BA | 3,050 SF | 2 Car Garage</p>
-                <p class="property-price">$1.5M&ndash;$1.75M &ndash; May 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1001 Halcyon -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">1001 Halcyon</h2>
-                <p class="property-address">1001 Halcyon, Nashville, TN 37204</p>
-                <p class="property-specs">4 BD | 4 BA | 5,000 SF | .17 AC | DADU</p>
-                <p class="property-price">$3.4M &ndash; June 2026 (3 Months Out)</p>
-                
-                <div class="btn-row"><a href="DESIGN_BOARD_1001_Halcyon.pdf" target="_blank" class="plans-btn">Design Board</a></div>
-            </div>
-        </div>
-
-        <!-- 610 Westboro Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="610_Westboro_Dr.jpg" alt="610 Westboro Dr"></div>
-            <div class="details">
-                <h2 class="property-title">610 Westboro Dr</h2>
-                <p class="property-address">610 Westboro Dr, Nashville, TN 37209</p>
-                <p class="property-specs">4 BD | 4.5 BA | 3,500+ SF | .31 AC</p>
-                <p class="property-price">$1.375M &ndash; June 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_610_Westboro_Dr.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 1020 Bison Ridge -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_01de78a3d2154e5bbfbb6c14231bf257~mv2.jpeg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image0.jpeg" alt="1020 Bison Ridge"></div>
-            <div class="details">
-                <h2 class="property-title">1020 Bison Ridge</h2>
-                <p class="property-address">1020 Bison Ridge, Joelton, TN</p>
-                <p class="property-specs">4 BD | 4.2 BA | 4,310 SF | 5.01 AC | Gated</p>
-                <p class="property-price">$3.75M &ndash; Summer 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1211 Carl Seyfert Memorial Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_eaf5a59bc4ff4d47a4ac7005e76b5035~mv2.jpg/v1/fill/w_807,h_492,al_c,q_85,enc_avif,quality_auto/582980754_18024005045777378_1736757674503928607_n.jpg" alt="1211 Carl Seyfert Memorial Dr"></div>
-            <div class="details">
-                <h2 class="property-title">1211 Carl Seyfert Memorial Dr</h2>
-                <p class="property-address">1211 Carl Seyfert Memorial Dr, Brentwood, TN</p>
-                <p class="property-specs">6 BD | 6.2 BA | 7,400 SF | 1.28 AC | Pool</p>
-                <p class="property-price">$4.8M &ndash; Summer 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1600 Burton Ave -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_d34f156c6fd5437db583c60e7d2f8d0a~mv2.jpeg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/burton.jpeg" alt="1600 Burton Ave"></div>
-            <div class="details">
-                <h2 class="property-title">1600 Burton Ave</h2>
-                <p class="property-address">1600 Burton Ave, Nashville, TN</p>
-                <p class="property-specs">5 BD | 5.2 BA | 6,603 SF | Pool</p>
-                <p class="property-price">$2.895M &ndash; Summer 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 2630 Clayton Arnold Rd -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_132db6ce55144d2dbaf55a509ad7ad7e~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_w7rdtxw7rdtxw7rd.png" alt="2630 Clayton Arnold Rd"></div>
-            <div class="details">
-                <h2 class="property-title">2630 Clayton Arnold Rd</h2>
-                <p class="property-address">2630 Clayton Arnold Rd, Franklin, TN</p>
-                <p class="property-specs">5 BD | 5.2 BA | 7,000 SF | 2.4 AC | Pool</p>
-                <p class="property-price">$4.5M &ndash; Summer 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 6052 Bresslyn Rd -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_881ff5c74e224945b1cc61d2b5dfe555~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-01-31%20at%203_13_19%20AM.png" alt="6052 Bresslyn Rd"></div>
-            <div class="details">
-                <h2 class="property-title">6052 Bresslyn Rd</h2>
-                <p class="property-address">6052 Bresslyn Rd, Nashville, TN</p>
-                <p class="property-specs">12,000+/- SF | 1.7 AC | Pool</p>
-                <p class="property-price">Price TBD &ndash; Summer 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 738 Templeton Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_2de7b51a0f7a402fa0f316b369afc496~mv2.webp/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNDER%2BCONTRACT%2B(1).webp" alt="738 Templeton Dr"></div>
-            <div class="details">
-                <h2 class="property-title">738 Templeton Dr</h2>
-                <p class="property-address">738 Templeton Dr, Nashville, TN</p>
-                <p class="property-specs">5 BD | 5.3 BA | 5,796 SF | .97 AC | Pool</p>
-                <p class="property-price">$4.7M &ndash; Summer 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 940 S Douglas Ave -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">940 S Douglas Ave</h2>
-                <p class="property-address">940 S Douglas Ave, Nashville, TN 37204</p>
-                <p class="property-specs">4 BD | 4 BA | 5,000 SF | .25 AC | 3 Car Garage | DADU</p>
-                <p class="property-price">$3.375M &ndash; July 2026 (4 Months Out)</p>
-                
-                <div class="btn-row"><a href="DESIGN_BOARD_940_S_Douglas_Ave.pdf" target="_blank" class="plans-btn">Design Board</a></div>
-            </div>
-        </div>
-
-        <!-- 1006A Southside Ave -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">1006A Southside Ave</h2>
-                <p class="property-address">1006A Southside Ave, Nashville, TN 37203</p>
-                <p class="property-specs">4 BD | 3.2 BA | 3,648 SF | 2 Car Garage</p>
-                <p class="property-price">$1.7M &ndash; Summer 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_1006_Southside_Ave.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 1006B Southside Ave -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">1006B Southside Ave</h2>
-                <p class="property-address">1006B Southside Ave, Nashville, TN 37203</p>
-                <p class="property-specs">4 BD | 3.2 BA | 3,648 SF | 2 Car Garage</p>
-                <p class="property-price">$1.7M &ndash; Summer 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_1006_Southside_Ave.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 1200 Clifton Ln -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_8d26827c20734d3ca0fcfb2d1def5c0a~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-02-05%20at%2010_26_23%20PM.png" alt="1200 Clifton Ln"></div>
-            <div class="details">
-                <h2 class="property-title">1200 Clifton Ln</h2>
-                <p class="property-address">1200 Clifton Ln, Nashville, TN 37212</p>
-                <p class="property-specs">4 BD | 4.2 BA | 4,090 SF | .18 AC | Primary on Main | Pool</p>
-                <p class="property-price">$2M &ndash; Fall 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_1200_Clifton_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 1202 Clifton Ln -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_8d26827c20734d3ca0fcfb2d1def5c0a~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-02-05%20at%2010_26_23%20PM.png" alt="1202 Clifton Ln"></div>
-            <div class="details">
-                <h2 class="property-title">1202 Clifton Ln</h2>
-                <p class="property-address">1202 Clifton Ln, Nashville, TN 37212</p>
-                <p class="property-specs">4 BD | 4.2 BA | 4,090 SF | .18 AC | Primary on Main | Pool</p>
-                <p class="property-price">$2M &ndash; Fall 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_1202_Clifton_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 322 Gun Club Rd -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_6fb8e20e3e9a47ada1adb7ff5b615609~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-01-31%20at%203_14_57%20AM.png" alt="322 Gun Club Rd"></div>
-            <div class="details">
-                <h2 class="property-title">322 Gun Club Rd</h2>
-                <p class="property-address">322 Gun Club Rd, Nashville, TN</p>
-                <p class="property-specs">1.46 AC | Pool | Details Coming Soon</p>
-                <p class="property-price">Price TBD &ndash; Fall 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 4424A Lealand Ln -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_cdb0690c751f41ed95d594b1c8df9ddc~mv2.png/v1/crop/x_0,y_44,w_1536,h_937/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/55404d35-ec71-4ff6-8afb-177e30c561fe.png" alt="4424A Lealand Ln"></div>
-            <div class="details">
-                <h2 class="property-title">4424A Lealand Ln</h2>
-                <p class="property-address">4424A Lealand Ln, Nashville, TN 37204</p>
-                <p class="property-specs">4 BD | 5.1 BA | 4,399 SF | .23 AC | 2 Car Garage</p>
-                <p class="property-price">$2.2M &ndash; Fall 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_4424A_Lealand_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 4424B Lealand Ln -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_cdb0690c751f41ed95d594b1c8df9ddc~mv2.png/v1/crop/x_0,y_44,w_1536,h_937/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/55404d35-ec71-4ff6-8afb-177e30c561fe.png" alt="4424B Lealand Ln"></div>
-            <div class="details">
-                <h2 class="property-title">4424B Lealand Ln</h2>
-                <p class="property-address">4424B Lealand Ln, Nashville, TN 37204</p>
-                <p class="property-specs">4 BD | 5.1 BA | 4,346 SF | .23 AC | 2 Car Garage</p>
-                <p class="property-price">$2.2M &ndash; Fall 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_4424B_Lealand_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 6036 Jocelyn Hollow Rd -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_bd0ddb70849044cabf185587476bfdba~mv2.jpg/v1/crop/x_61,y_39,w_903,h_550/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(10).jpg" alt="6036 Jocelyn Hollow Rd"></div>
-            <div class="details">
-                <h2 class="property-title">6036 Jocelyn Hollow Rd</h2>
-                <p class="property-address">6036 Jocelyn Hollow Rd, Nashville, TN</p>
-                <p class="property-specs">12,000+/- SF | 1.6 AC | Pool</p>
-                <p class="property-price">Price TBD &ndash; Fall 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 915 Kirkwood Ave -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">915 Kirkwood Ave</h2>
-                <p class="property-address">915 Kirkwood Ave, Nashville, TN</p>
-                <p class="property-specs">Historical Remodel | 9,000+ SF | .5 AC | 3 Car Garage | Pool | Basement</p>
-                <p class="property-price">$5M &ndash; Oct 2026 (6 Months Out)</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1010 Draughon Ave -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">1010 Draughon Ave</h2>
-                <p class="property-address">1010 Draughon Ave, Nashville, TN 37204</p>
-                <p class="property-specs">5 BD | 5,200 SF | Pool</p>
-                <p class="property-price">$3.5M &ndash; Finishing Winter 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1306 Clifton Ln -->
-        <div class="property-card">
-            <div class="image-container"><img src="1306_Clifton_Ln.avif" alt="1306 Clifton Ln"></div>
-            <div class="details">
-                <h2 class="property-title">1306 Clifton Ln</h2>
-                <p class="property-address">1306 Clifton Ln, Nashville, TN 37212</p>
-                <p class="property-specs">4 BD | 4.1 BA | 3,895 SF | .17 AC | 2 Car Garage | Spa</p>
-                <p class="property-price">$2.05M &ndash; Winter 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_1306_Clifton_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 1308 Clifton Ln -->
-        <div class="property-card">
-            <div class="image-container"><img src="1308_Clifton_Ln.avif" alt="1308 Clifton Ln"></div>
-            <div class="details">
-                <h2 class="property-title">1308 Clifton Ln</h2>
-                <p class="property-address">1308 Clifton Ln, Nashville, TN 37212</p>
-                <p class="property-specs">4 BD | 4.1 BA | 3,923 SF | .17 AC | 2 Car Garage | Pool</p>
-                <p class="property-price">$2.1M &ndash; Winter 2026</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_1308_Clifton_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 9005 Oden Ct -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_1f0cfa4cca3347609d549e550965b413~mv2.jpeg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/PHOTO-2026-01-29-14-05-04_JPEG.jpeg" alt="9005 Oden Ct"></div>
-            <div class="details">
-                <h2 class="property-title">9005 Oden Ct</h2>
-                <p class="property-address">9005 Oden Ct, Brentwood, TN 37027</p>
-                <p class="property-specs">6 BD | 7.2 BA | 7,000 SF | 1.06 AC | Pool</p>
-                <p class="property-price">$4.799M &ndash; Winter 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1004 Rodney Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_3a1b146afcf24f78a4fd7dd66f60a612~mv2.png/v1/crop/x_37,y_0,w_1286,h_784/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_qp848bqp848bqp84.png" alt="1004 Rodney Dr"></div>
-            <div class="details">
-                <h2 class="property-title">1004 Rodney Dr</h2>
-                <p class="property-address">1004 Rodney Dr, Nashville, TN</p>
-                <p class="property-specs">5 BD | 5.1 BA | 5,000 SF | .5 AC | Pool</p>
-                <p class="property-price">$2.3M &ndash; May 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1006 Rodney Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_3a1b146afcf24f78a4fd7dd66f60a612~mv2.png/v1/crop/x_37,y_0,w_1286,h_784/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_qp848bqp848bqp84.png" alt="1006 Rodney Dr"></div>
-            <div class="details">
-                <h2 class="property-title">1006 Rodney Dr</h2>
-                <p class="property-address">1006 Rodney Dr, Nashville, TN</p>
-                <p class="property-specs">5 BD | 5.1 BA | 5,000 SF | .5 AC | Pool</p>
-                <p class="property-price">$2.3M &ndash; May 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 1819 Elliott Ave -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_cef01d934a694c36bbee664a90291e69~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1819%20Elliott%20Front2_JPG.jpg" alt="1819 Elliott Ave"></div>
-            <div class="details">
-                <h2 class="property-title">1819 Elliott Ave</h2>
-                <p class="property-address">1819 Elliott Ave, Nashville, TN</p>
-                <p class="property-specs">4 BD | 3.2 BA | 2,300 SF | .27 AC | Pool</p>
-                <p class="property-price">$1.25M &ndash; June 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 2022 Galbraith Dr -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_bd3e4e7564044ba7b7d989d6160da3bd~mv2.jpg/v1/crop/x_32,y_20,w_963,h_588/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(13).jpg" alt="2022 Galbraith Dr"></div>
-            <div class="details">
-                <h2 class="property-title">2022 Galbraith Dr</h2>
-                <p class="property-address">2022 Galbraith Dr, Nashville, TN</p>
-                <p class="property-specs">4 BD | 4.2 BA | 5,321 SF | .34 AC</p>
-                <p class="property-price">$2.5M &ndash; May 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 2495 Deer Meadow Ln -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_18e83fdf105f4d429b52d95b4aafdff4~mv2.jpg/v1/crop/x_177,y_106,w_876,h_534/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Design%20Inspo-Arrington%20Project.jpg" alt="2495 Deer Meadow Ln"></div>
-            <div class="details">
-                <h2 class="property-title">2495 Deer Meadow Ln</h2>
-                <p class="property-address">2495 Deer Meadow Ln, Arrington, TN 37014</p>
-                <p class="property-specs">3 BD | 1.1 BA | 3,000 SF | 8.79 AC</p>
-                <p class="property-price">$2.8M &ndash; May 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 3433 Stokesmont Rd -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_e8ca2a06e35749cd9409117626b42ab6~mv2.jpg/v1/crop/x_0,y_173,w_1024,h_625/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(9).jpg" alt="3433 Stokesmont Rd"></div>
-            <div class="details">
-                <h2 class="property-title">3433 Stokesmont Rd</h2>
-                <p class="property-address">3433 Stokesmont Rd, Nashville, TN</p>
-                <p class="property-specs">5 BD | 5.1 BA | 5,831 SF | .23 AC</p>
-                <p class="property-price">$2.5M &ndash; July 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 6011 Don Allen Ave -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_5b65a9c3e9364467bfa98cc2f7ed9cbe~mv2.png/v1/crop/x_135,y_0,w_964,h_588/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-01-31%20at%2012_18_02%20PM.png" alt="6011 Don Allen Ave"></div>
-            <div class="details">
-                <h2 class="property-title">6011 Don Allen Ave</h2>
-                <p class="property-address">6011 Don Allen Ave, Nashville, TN</p>
-                <p class="property-specs">5 BD | 6.2 BA | 5,000+ SF | .5 AC | Pool</p>
-                <p class="property-price">$4.499M &ndash; December 2026</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 6397 Temple Rd -->
-        <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_ca4ae6e49d6c43ce9cdf9cbf38a5efb3~mv2.webp/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1500x844%20(11).webp" alt="6397 Temple Rd"></div>
-            <div class="details">
-                <h2 class="property-title">6397 Temple Rd</h2>
-                <p class="property-address">6397 Temple Rd, Nashville, TN</p>
-                <p class="property-specs">5 BD | 5 BA | 6,500 SF | 4.35 AC | Pool</p>
-                <p class="property-price">$4.5M &ndash; August 2026</p>
-                
-                
-            </div>
-        </div>
+    <div class="properties">
 
         <!-- 714 Shawnee Dr -->
         <div class="property-card">
@@ -557,9 +56,190 @@
             </div>
         </div>
 
+
+        <!-- 4406 Sunnybrook Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_4bdc615e5f674dfaa5e5621fa60e8124~mv2.png/v1/crop/x_92,y_31,w_1162,h_709/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_lf3r9nlf3r9nlf3r.png" alt="4406 Sunnybrook Dr"></div>
+            <div class="details">
+                <h2 class="property-title">4406 Sunnybrook Dr</h2>
+                <p class="property-address">4406 Sunnybrook Dr, Nashville, TN</p>
+                <p class="property-specs">10,000+/- SF | 1.07 AC | Pool</p>
+                <p class="property-price">Price TBD &ndash; Spring 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 6008 Elizabethan Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_10c71c1fa3474234905215d8daa25d9d~mv2.jpeg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image0.jpeg" alt="6008 Elizabethan Dr"></div>
+            <div class="details">
+                <h2 class="property-title">6008 Elizabethan Dr</h2>
+                <p class="property-address">6008 Elizabethan Dr, Nashville, TN 37205</p>
+                <p class="property-specs">5 BD | 9 BA | 8,543 SF | 1.46 AC | Pool</p>
+                <p class="property-price">$7.3M &ndash; Spring 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 610 Westboro Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="610_Westboro_Dr.jpg" alt="610 Westboro Dr"></div>
+            <div class="details">
+                <h2 class="property-title">610 Westboro Dr</h2>
+                <p class="property-address">610 Westboro Dr, Nashville, TN 37209</p>
+                <p class="property-specs">4 BD | 4.5 BA | 3,500+ SF | .31 AC</p>
+                <p class="property-price">$1.375M &ndash; Spring 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_610_Westboro_Dr.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 750 Templeton Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_a6398b87209740e9912e32310a81a7d9~mv2.webp/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-render-10285042%2B(1).webp" alt="750 Templeton Dr"></div>
+            <div class="details">
+                <h2 class="property-title">750 Templeton Dr</h2>
+                <p class="property-address">750 Templeton Dr, Nashville, TN</p>
+                <p class="property-specs">6 BD | 5.3 BA | 5,474 SF | .97 AC | Pool</p>
+                <p class="property-price">$3.799M &ndash; Spring 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 840 Brentview Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_4bc2e0d29e204a4882883e771fac263a~mv2.jpg/v1/crop/x_122,y_0,w_1253,h_767/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1500x1000.jpg" alt="840 Brentview Dr"></div>
+            <div class="details">
+                <h2 class="property-title">840 Brentview Dr</h2>
+                <p class="property-address">840 Brentview Dr, Nashville, TN</p>
+                <p class="property-specs">6 BD | 8 BA | 7,450 SF | 1.05 AC | Pool</p>
+                <p class="property-price">$5.499M &ndash; Spring 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 1004 Rodney Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_3a1b146afcf24f78a4fd7dd66f60a612~mv2.png/v1/crop/x_37,y_0,w_1286,h_784/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_qp848bqp848bqp84.png" alt="1004 Rodney Dr"></div>
+            <div class="details">
+                <h2 class="property-title">1004 Rodney Dr</h2>
+                <p class="property-address">1004 Rodney Dr, Nashville, TN</p>
+                <p class="property-specs">5 BD | 5.1 BA | 5,000 SF | .5 AC | Pool</p>
+                <p class="property-price">$2.3M &ndash; May 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 1006 Rodney Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_3a1b146afcf24f78a4fd7dd66f60a612~mv2.png/v1/crop/x_37,y_0,w_1286,h_784/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_qp848bqp848bqp84.png" alt="1006 Rodney Dr"></div>
+            <div class="details">
+                <h2 class="property-title">1006 Rodney Dr</h2>
+                <p class="property-address">1006 Rodney Dr, Nashville, TN</p>
+                <p class="property-specs">5 BD | 5.1 BA | 5,000 SF | .5 AC | Pool</p>
+                <p class="property-price">$2.3M &ndash; May 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 1413 Clifton Ln -->
+        <div class="property-card">
+            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
+            <div class="details">
+                <h2 class="property-title">1413 Clifton Ln</h2>
+                <p class="property-address">1413 Clifton Ln, Nashville, TN 37212</p>
+                <p class="property-specs">4 BD | 4 BA | 3,050 SF | 2 Car Garage</p>
+                <p class="property-price">$1.5M&ndash;$1.75M &ndash; May 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 2022 Galbraith Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_bd3e4e7564044ba7b7d989d6160da3bd~mv2.jpg/v1/crop/x_32,y_20,w_963,h_588/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(13).jpg" alt="2022 Galbraith Dr"></div>
+            <div class="details">
+                <h2 class="property-title">2022 Galbraith Dr</h2>
+                <p class="property-address">2022 Galbraith Dr, Nashville, TN</p>
+                <p class="property-specs">4 BD | 4.2 BA | 5,321 SF | .34 AC</p>
+                <p class="property-price">$2.5M &ndash; May 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 2495 Deer Meadow Ln -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_18e83fdf105f4d429b52d95b4aafdff4~mv2.jpg/v1/crop/x_177,y_106,w_876,h_534/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Design%20Inspo-Arrington%20Project.jpg" alt="2495 Deer Meadow Ln"></div>
+            <div class="details">
+                <h2 class="property-title">2495 Deer Meadow Ln</h2>
+                <p class="property-address">2495 Deer Meadow Ln, Arrington, TN 37014</p>
+                <p class="property-specs">3 BD | 1.1 BA | 3,000 SF | 8.79 AC</p>
+                <p class="property-price">$2.8M &ndash; May 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- Georgetown Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_305086c68b284ae89a0aa81f64bcaf34~mv2.png/v1/crop/x_0,y_33,w_1256,h_766/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6993_PNG.png" alt="Georgetown Dr"></div>
+            <div class="details">
+                <h2 class="property-title">Georgetown Dr</h2>
+                <p class="property-address">Georgetown Dr, Nashville, TN 37205</p>
+                <p class="property-specs">6 BD | 8 BA | 7,237 SF | .98 AC | Pool</p>
+                <p class="property-price">$6.5M &ndash; May 2026</p>
+                
+                
+            </div>
+        </div>
+        <!-- 1001 Halcyon -->
+        <div class="property-card">
+            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
+            <div class="details">
+                <h2 class="property-title">1001 Halcyon</h2>
+                <p class="property-address">1001 Halcyon, Nashville, TN 37204</p>
+                <p class="property-specs">4 BD | 4 BA | 5,000 SF | .17 AC | DADU</p>
+                <p class="property-price">$3.4M &ndash; June 2026</p>
+                
+                <div class="btn-row"><a href="DESIGN_BOARD_1001_Halcyon.pdf" target="_blank" class="plans-btn">Design Board</a></div>
+            </div>
+        </div>
+
+
+        <!-- 1819 Elliott Ave -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_cef01d934a694c36bbee664a90291e69~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1819%20Elliott%20Front2_JPG.jpg" alt="1819 Elliott Ave"></div>
+            <div class="details">
+                <h2 class="property-title">1819 Elliott Ave</h2>
+                <p class="property-address">1819 Elliott Ave, Nashville, TN</p>
+                <p class="property-specs">4 BD | 3.2 BA | 2,300 SF | .27 AC | Pool</p>
+                <p class="property-price">$1.25M &ndash; June 2026</p>
+                
+                
+            </div>
+        </div>
+
+
         <!-- 813 Montrose Ave -->
         <div class="property-card">
-            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_305086c68b284ae89a0aa81f64bcaf34~mv2.png/v1/crop/x_0,y_33,w_1256,h_766/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6993_PNG.png" alt="813 Montrose Ave"></div>
+            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
             <div class="details">
                 <h2 class="property-title">813 Montrose Ave</h2>
                 <p class="property-address">813 Montrose Ave, Nashville, TN</p>
@@ -569,6 +249,175 @@
                 
             </div>
         </div>
+
+
+        <!-- 1006A Southside Ave -->
+        <div class="property-card">
+            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
+            <div class="details">
+                <h2 class="property-title">1006A Southside Ave</h2>
+                <p class="property-address">1006A Southside Ave, Nashville, TN 37203</p>
+                <p class="property-specs">4 BD | 3.2 BA | 3,648 SF | 2 Car Garage</p>
+                <p class="property-price">$1.7M &ndash; Summer 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_1006_Southside_Ave.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 1006B Southside Ave -->
+        <div class="property-card">
+            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
+            <div class="details">
+                <h2 class="property-title">1006B Southside Ave</h2>
+                <p class="property-address">1006B Southside Ave, Nashville, TN 37203</p>
+                <p class="property-specs">4 BD | 3.2 BA | 3,648 SF | 2 Car Garage</p>
+                <p class="property-price">$1.7M &ndash; Summer 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_1006_Southside_Ave.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 1020 Bison Ridge -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_01de78a3d2154e5bbfbb6c14231bf257~mv2.jpeg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image0.jpeg" alt="1020 Bison Ridge"></div>
+            <div class="details">
+                <h2 class="property-title">1020 Bison Ridge</h2>
+                <p class="property-address">1020 Bison Ridge, Joelton, TN</p>
+                <p class="property-specs">4 BD | 4.2 BA | 4,310 SF | 5.01 AC | Gated</p>
+                <p class="property-price">$3.75M &ndash; Summer 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 120 39th Ave N -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_2b4f52e8cf4440ed941dd4a88ce8658a~mv2.webp" alt="120 39th Ave N"></div>
+            <div class="details">
+                <h2 class="property-title">120 39th Ave N</h2>
+                <p class="property-address">120 39th Ave N, Nashville, TN 37209</p>
+                <p class="property-specs">5 BD | 7 BA | 4,610 SF | .18 AC | DADU</p>
+                <p class="property-price">$2.699M &ndash; Summer 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 1211 Carl Seyfert Memorial Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_eaf5a59bc4ff4d47a4ac7005e76b5035~mv2.jpg/v1/fill/w_807,h_492,al_c,q_85,enc_avif,quality_auto/582980754_18024005045777378_1736757674503928607_n.jpg" alt="1211 Carl Seyfert Memorial Dr"></div>
+            <div class="details">
+                <h2 class="property-title">1211 Carl Seyfert Memorial Dr</h2>
+                <p class="property-address">1211 Carl Seyfert Memorial Dr, Brentwood, TN</p>
+                <p class="property-specs">6 BD | 6.2 BA | 7,400 SF | 1.28 AC | Pool</p>
+                <p class="property-price">$4.8M &ndash; Summer 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 1600 Burton Ave -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_d34f156c6fd5437db583c60e7d2f8d0a~mv2.jpeg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/burton.jpeg" alt="1600 Burton Ave"></div>
+            <div class="details">
+                <h2 class="property-title">1600 Burton Ave</h2>
+                <p class="property-address">1600 Burton Ave, Nashville, TN</p>
+                <p class="property-specs">5 BD | 5.2 BA | 6,603 SF | Pool</p>
+                <p class="property-price">$2.895M &ndash; Summer 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 2630 Clayton Arnold Rd -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_132db6ce55144d2dbaf55a509ad7ad7e~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_w7rdtxw7rdtxw7rd.png" alt="2630 Clayton Arnold Rd"></div>
+            <div class="details">
+                <h2 class="property-title">2630 Clayton Arnold Rd</h2>
+                <p class="property-address">2630 Clayton Arnold Rd, Franklin, TN</p>
+                <p class="property-specs">5 BD | 5.2 BA | 7,000 SF | 2.4 AC | Pool</p>
+                <p class="property-price">$4.5M &ndash; Summer 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 3433 Stokesmont Rd -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_e8ca2a06e35749cd9409117626b42ab6~mv2.jpg/v1/crop/x_0,y_173,w_1024,h_625/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(9).jpg" alt="3433 Stokesmont Rd"></div>
+            <div class="details">
+                <h2 class="property-title">3433 Stokesmont Rd</h2>
+                <p class="property-address">3433 Stokesmont Rd, Nashville, TN</p>
+                <p class="property-specs">5 BD | 5.1 BA | 5,831 SF | .23 AC</p>
+                <p class="property-price">$2.5M &ndash; July 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 6052 Bresslyn Rd -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_881ff5c74e224945b1cc61d2b5dfe555~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-01-31%20at%203_13_19%20AM.png" alt="6052 Bresslyn Rd"></div>
+            <div class="details">
+                <h2 class="property-title">6052 Bresslyn Rd</h2>
+                <p class="property-address">6052 Bresslyn Rd, Nashville, TN</p>
+                <p class="property-specs">12,000+/- SF | 1.7 AC | Pool</p>
+                <p class="property-price">Price TBD &ndash; Summer 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 738 Templeton Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_2de7b51a0f7a402fa0f316b369afc496~mv2.webp/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNDER%2BCONTRACT%2B(1).webp" alt="738 Templeton Dr"></div>
+            <div class="details">
+                <h2 class="property-title">738 Templeton Dr</h2>
+                <p class="property-address">738 Templeton Dr, Nashville, TN</p>
+                <p class="property-specs">5 BD | 5.3 BA | 5,796 SF | .97 AC | Pool</p>
+                <p class="property-price">$4.7M &ndash; Summer 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 940 S Douglas Ave -->
+        <div class="property-card">
+            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
+            <div class="details">
+                <h2 class="property-title">940 S Douglas Ave</h2>
+                <p class="property-address">940 S Douglas Ave, Nashville, TN 37204</p>
+                <p class="property-specs">4 BD | 4 BA | 5,000 SF | .25 AC | 3 Car Garage | DADU</p>
+                <p class="property-price">$3.375M &ndash; July 2026</p>
+                
+                <div class="btn-row"><a href="DESIGN_BOARD_940_S_Douglas_Ave.pdf" target="_blank" class="plans-btn">Design Board</a></div>
+            </div>
+        </div>
+
+
+        <!-- 6397 Temple Rd -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_ca4ae6e49d6c43ce9cdf9cbf38a5efb3~mv2.webp/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1500x844%20(11).webp" alt="6397 Temple Rd"></div>
+            <div class="details">
+                <h2 class="property-title">6397 Temple Rd</h2>
+                <p class="property-address">6397 Temple Rd, Nashville, TN</p>
+                <p class="property-specs">5 BD | 5 BA | 6,500 SF | 4.35 AC | Pool</p>
+                <p class="property-price">$4.5M &ndash; August 2026</p>
+                
+                
+            </div>
+        </div>
+
 
         <!-- 832 Brook Hollow Rd -->
         <div class="property-card">
@@ -583,6 +432,189 @@
             </div>
         </div>
 
+
+        <!-- 1200 Clifton Ln -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_8d26827c20734d3ca0fcfb2d1def5c0a~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-02-05%20at%2010_26_23%20PM.png" alt="1200 Clifton Ln"></div>
+            <div class="details">
+                <h2 class="property-title">1200 Clifton Ln</h2>
+                <p class="property-address">1200 Clifton Ln, Nashville, TN 37212</p>
+                <p class="property-specs">4 BD | 4.2 BA | 4,090 SF | .18 AC | Primary on Main | Pool</p>
+                <p class="property-price">$2M &ndash; Fall 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_1200_Clifton_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 1202 Clifton Ln -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_8d26827c20734d3ca0fcfb2d1def5c0a~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-02-05%20at%2010_26_23%20PM.png" alt="1202 Clifton Ln"></div>
+            <div class="details">
+                <h2 class="property-title">1202 Clifton Ln</h2>
+                <p class="property-address">1202 Clifton Ln, Nashville, TN 37212</p>
+                <p class="property-specs">4 BD | 4.2 BA | 4,090 SF | .18 AC | Primary on Main | Pool</p>
+                <p class="property-price">$2M &ndash; Fall 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_1202_Clifton_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 322 Gun Club Rd -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_6fb8e20e3e9a47ada1adb7ff5b615609~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-01-31%20at%203_14_57%20AM.png" alt="322 Gun Club Rd"></div>
+            <div class="details">
+                <h2 class="property-title">322 Gun Club Rd</h2>
+                <p class="property-address">322 Gun Club Rd, Nashville, TN</p>
+                <p class="property-specs">1.46 AC | Pool | Details Coming Soon</p>
+                <p class="property-price">Price TBD &ndash; Fall 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 4424A Lealand Ln -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_cdb0690c751f41ed95d594b1c8df9ddc~mv2.png/v1/crop/x_0,y_44,w_1536,h_937/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/55404d35-ec71-4ff6-8afb-177e30c561fe.png" alt="4424A Lealand Ln"></div>
+            <div class="details">
+                <h2 class="property-title">4424A Lealand Ln</h2>
+                <p class="property-address">4424A Lealand Ln, Nashville, TN 37204</p>
+                <p class="property-specs">4 BD | 5.1 BA | 4,399 SF | .23 AC | 2 Car Garage</p>
+                <p class="property-price">$2.2M &ndash; Fall 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_4424A_Lealand_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 4424B Lealand Ln -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_cdb0690c751f41ed95d594b1c8df9ddc~mv2.png/v1/crop/x_0,y_44,w_1536,h_937/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/55404d35-ec71-4ff6-8afb-177e30c561fe.png" alt="4424B Lealand Ln"></div>
+            <div class="details">
+                <h2 class="property-title">4424B Lealand Ln</h2>
+                <p class="property-address">4424B Lealand Ln, Nashville, TN 37204</p>
+                <p class="property-specs">4 BD | 5.1 BA | 4,346 SF | .23 AC | 2 Car Garage</p>
+                <p class="property-price">$2.2M &ndash; Fall 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_4424B_Lealand_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 6036 Jocelyn Hollow Rd -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_bd0ddb70849044cabf185587476bfdba~mv2.jpg/v1/crop/x_61,y_39,w_903,h_550/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(10).jpg" alt="6036 Jocelyn Hollow Rd"></div>
+            <div class="details">
+                <h2 class="property-title">6036 Jocelyn Hollow Rd</h2>
+                <p class="property-address">6036 Jocelyn Hollow Rd, Nashville, TN</p>
+                <p class="property-specs">12,000+/- SF | 1.6 AC | Pool</p>
+                <p class="property-price">Price TBD &ndash; Fall 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 915 Kirkwood Ave -->
+        <div class="property-card">
+            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
+            <div class="details">
+                <h2 class="property-title">915 Kirkwood Ave</h2>
+                <p class="property-address">915 Kirkwood Ave, Nashville, TN</p>
+                <p class="property-specs">Historical Remodel | 9,000+ SF | .5 AC | 3 Car Garage | Pool | Basement</p>
+                <p class="property-price">$5M &ndash; October 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 1010 Draughon Ave -->
+        <div class="property-card">
+            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
+            <div class="details">
+                <h2 class="property-title">1010 Draughon Ave</h2>
+                <p class="property-address">1010 Draughon Ave, Nashville, TN 37204</p>
+                <p class="property-specs">5 BD | 5,200 SF | Pool</p>
+                <p class="property-price">$3.5M &ndash; Winter 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 1306 Clifton Ln -->
+        <div class="property-card">
+            <div class="image-container"><img src="1306_Clifton_Ln.avif" alt="1306 Clifton Ln"></div>
+            <div class="details">
+                <h2 class="property-title">1306 Clifton Ln</h2>
+                <p class="property-address">1306 Clifton Ln, Nashville, TN 37212</p>
+                <p class="property-specs">4 BD | 4.1 BA | 3,895 SF | .17 AC | 2 Car Garage | Spa</p>
+                <p class="property-price">$2.05M &ndash; Winter 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_1306_Clifton_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 1308 Clifton Ln -->
+        <div class="property-card">
+            <div class="image-container"><img src="1308_Clifton_Ln.avif" alt="1308 Clifton Ln"></div>
+            <div class="details">
+                <h2 class="property-title">1308 Clifton Ln</h2>
+                <p class="property-address">1308 Clifton Ln, Nashville, TN 37212</p>
+                <p class="property-specs">4 BD | 4.1 BA | 3,923 SF | .17 AC | 2 Car Garage | Pool</p>
+                <p class="property-price">$2.1M &ndash; Winter 2026</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_1308_Clifton_Ln.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 6011 Don Allen Ave -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_5b65a9c3e9364467bfa98cc2f7ed9cbe~mv2.png/v1/crop/x_135,y_0,w_964,h_588/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202026-01-31%20at%2012_18_02%20PM.png" alt="6011 Don Allen Ave"></div>
+            <div class="details">
+                <h2 class="property-title">6011 Don Allen Ave</h2>
+                <p class="property-address">6011 Don Allen Ave, Nashville, TN</p>
+                <p class="property-specs">5 BD | 6.2 BA | 5,000+ SF | .5 AC | Pool</p>
+                <p class="property-price">$4.499M &ndash; December 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 83 Brookwood Ter -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_77b5b8b1cb1d4506a6bd88c2b9b276e2~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(2).jpg" alt="83 Brookwood Ter"></div>
+            <div class="details">
+                <h2 class="property-title">83 Brookwood Ter</h2>
+                <p class="property-address">83 Brookwood Ter, Nashville, TN 37205</p>
+                <p class="property-specs">4 BD | 4.5 BA | 4,363 SF | .25 AC</p>
+                <p class="property-price">$2.2M &ndash; Winter 2026</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 9005 Oden Ct -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_1f0cfa4cca3347609d549e550965b413~mv2.jpeg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/PHOTO-2026-01-29-14-05-04_JPEG.jpeg" alt="9005 Oden Ct"></div>
+            <div class="details">
+                <h2 class="property-title">9005 Oden Ct</h2>
+                <p class="property-address">9005 Oden Ct, Brentwood, TN 37027</p>
+                <p class="property-specs">6 BD | 7.2 BA | 7,000 SF | 1.06 AC | Pool</p>
+                <p class="property-price">$4.799M &ndash; Winter 2026</p>
+                
+                
+            </div>
+        </div>
+
+
         <!-- 316 Gun Club Rd -->
         <div class="property-card">
             <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_439eb072558042f6a1c78b422b7a18cb~mv2.png/v1/fill/w_569,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gemini_Generated_Image_a9vylia9vylia9vy.png" alt="316 Gun Club Rd"></div>
@@ -595,6 +627,7 @@
                 
             </div>
         </div>
+
 
         <!-- 3604 Woodmont Blvd -->
         <div class="property-card">
@@ -609,6 +642,7 @@
             </div>
         </div>
 
+
         <!-- 708 Clematis Dr -->
         <div class="property-card">
             <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_04856f7b949e43b09ca113aa469c2433~mv2.jpg/v1/crop/x_149,y_0,w_539,h_329/fill/w_569,h_347,al_c,lg_1,q_80,enc_avif,quality_auto/unnamed%20(11).jpg" alt="708 Clematis Dr"></div>
@@ -621,6 +655,77 @@
                 
             </div>
         </div>
+
+
+        <!-- 1211 Jefferson Davis -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_32aeb48aa3d24e66acdd7f2c0b0a364b~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/591155530_18026324219777378_5258489329646174750_n.jpg" alt="1211 Jefferson Davis"></div>
+            <div class="details">
+                <h2 class="property-title">1211 Jefferson Davis</h2>
+                <p class="property-address">1211 Jefferson Davis, Nashville, TN</p>
+                <p class="property-specs">6 BD | 5.3 BA | 7,600 SF | 1.24 AC | Pool</p>
+                <p class="property-price">$5.3M &ndash; Spring 2027</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 515 Shenandoah Dr -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_15ffc52ed7254ee7b275337c48fb3a8f~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/601104295_18027199778777378_4690276583472516587_n.jpg" alt="515 Shenandoah Dr"></div>
+            <div class="details">
+                <h2 class="property-title">515 Shenandoah Dr</h2>
+                <p class="property-address">515 Shenandoah Dr, Brentwood, TN</p>
+                <p class="property-specs">6 BD | 5.3 BA | 8,000 SF | 1.23 AC | Pool</p>
+                <p class="property-price">$4.8M &ndash; Spring 2027</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 804 Wilson Pike -->
+        <div class="property-card">
+            <div class="image-container"><img src="https://static.wixstatic.com/media/ba6d68_75ec3f5a50f141859622f4a0d6783b6b~mv2.jpg/v1/fill/w_569,h_347,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(4).jpg" alt="804 Wilson Pike"></div>
+            <div class="details">
+                <h2 class="property-title">804 Wilson Pike</h2>
+                <p class="property-address">804 Wilson Pike, Brentwood, TN</p>
+                <p class="property-specs">6 BD | 5.3 BA | 7,300 SF | 1.66 AC | Pool</p>
+                <p class="property-price">$4.7M &ndash; Spring 2027</p>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- 1115 Halcyon -->
+        <div class="property-card">
+            <div class="image-container"><img src="1115 Halcyon.jpg" alt="1115 Halcyon"></div>
+            <div class="details">
+                <h2 class="property-title">1115 Halcyon</h2>
+                <p class="property-address">1115 Halcyon, Nashville, TN 37204</p>
+                <p class="property-specs">Details Coming Soon</p>
+                <p class="property-price">Price TBD &ndash; Late 2027</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_1115_Halcyon_Ave.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
+
+        <!-- 1117 Halcyon -->
+        <div class="property-card">
+            <div class="image-container"><img src="1117 Halcyon.jpg" alt="1117 Halcyon"></div>
+            <div class="details">
+                <h2 class="property-title">1117 Halcyon</h2>
+                <p class="property-address">1117 Halcyon, Nashville, TN 37204</p>
+                <p class="property-specs">Details Coming Soon</p>
+                <p class="property-price">Price TBD &ndash; Late 2027</p>
+                
+                <div class="btn-row"><a href="BUILDING_PLANS_1117_Halcyon_Ave.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
+            </div>
+        </div>
+
 
         <!-- 3724 Benham Ave -->
         <div class="property-card">
@@ -635,31 +740,6 @@
             </div>
         </div>
 
-        <!-- 1115 Halcyon -->
-        <div class="property-card">
-            <div class="image-container"><img src="1115 Halcyon.jpg" alt="1115 Halcyon"></div>
-            <div class="details">
-                <h2 class="property-title">1115 Halcyon</h2>
-                <p class="property-address">1115 Halcyon, Nashville, TN 37204</p>
-                <p class="property-specs">Details Coming Soon</p>
-                <p class="property-price">Late 2027</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_1115_Halcyon_Ave.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
-
-        <!-- 1117 Halcyon -->
-        <div class="property-card">
-            <div class="image-container"><img src="1117 Halcyon.jpg" alt="1117 Halcyon"></div>
-            <div class="details">
-                <h2 class="property-title">1117 Halcyon</h2>
-                <p class="property-address">1117 Halcyon, Nashville, TN 37204</p>
-                <p class="property-specs">Details Coming Soon</p>
-                <p class="property-price">Late 2027</p>
-                
-                <div class="btn-row"><a href="BUILDING_PLANS_1117_Halcyon_Ave.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
-            </div>
-        </div>
 
         <!-- 1109 Montrose -->
         <div class="property-card">
@@ -674,6 +754,7 @@
             </div>
         </div>
 
+
         <!-- 111 Page Rd -->
         <div class="property-card">
             <div class="image-container"><img src="111Page.png" alt="111 Page Rd"></div>
@@ -687,18 +768,6 @@
             </div>
         </div>
 
-        <!-- 120 39th Ave N -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">120 39th Ave N</h2>
-                <p class="property-address">120 39th Ave N, Nashville, TN</p>
-                <p class="property-specs">Details Coming Soon</p>
-                <p class="property-price">Price TBD</p>
-                
-                
-            </div>
-        </div>
 
         <!-- 126 Taggart Ave -->
         <div class="property-card">
@@ -713,6 +782,7 @@
             </div>
         </div>
 
+
         <!-- 220 Heady Dr -->
         <div class="property-card">
             <div class="image-container"><img src="220headydr.jpg" alt="220 Heady Dr"></div>
@@ -725,6 +795,7 @@
                 <div class="btn-row"><a href="BUILDING_PLANS_220_Heady_Dr.pdf" target="_blank" class="plans-btn">Building Plans</a></div>
             </div>
         </div>
+
 
         <!-- 3720 Benham Ave -->
         <div class="property-card">
@@ -739,44 +810,20 @@
             </div>
         </div>
 
-        <!-- 4546 Cedar Grove Rd -->
+
+        <!-- 4700 Kentucky A&amp;B -->
         <div class="property-card">
             <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
             <div class="details">
-                <h2 class="property-title">4546 Cedar Grove Rd</h2>
-                <p class="property-address">4546 Cedar Grove Rd, Nashville, TN</p>
-                <p class="property-specs">4 AC | Details Coming Soon</p>
-                <p class="property-price">Price TBD</p>
+                <h2 class="property-title">4700 Kentucky A&amp;B</h2>
+                <p class="property-address">4700 Kentucky A&amp;B, Nashville, TN 37209</p>
+                <p class="property-specs">4 BD | 5.1 BA | 3,340 SF</p>
+                <p class="property-price">$1.05M &ndash; Summer 2026</p>
                 
                 
             </div>
         </div>
 
-        <!-- 4700 Kentucky Ave -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">4700 Kentucky Ave</h2>
-                <p class="property-address">4700 Kentucky Ave, Nashville, TN</p>
-                <p class="property-specs">Details Coming Soon</p>
-                <p class="property-price">Price TBD</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- 83 Brookwood Ter -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">83 Brookwood Ter</h2>
-                <p class="property-address">83 Brookwood Ter, Nashville, TN</p>
-                <p class="property-specs">Details Coming Soon</p>
-                <p class="property-price">Price TBD</p>
-                
-                
-            </div>
-        </div>
 
         <!-- 928 Montrose Ave -->
         <div class="property-card">
@@ -786,19 +833,6 @@
                 <p class="property-address">928 Montrose Ave, Nashville, TN 37204</p>
                 <p class="property-specs">3 BD | 2 BA | 2,600 SF</p>
                 <p class="property-price">$1.4M</p>
-                
-                
-            </div>
-        </div>
-
-        <!-- Georgetown Dr -->
-        <div class="property-card">
-            <div class="image-container"><div class="photo-placeholder"><span>Photo Coming Soon</span></div></div>
-            <div class="details">
-                <h2 class="property-title">Georgetown Dr</h2>
-                <p class="property-address">Georgetown Dr, Nashville, TN</p>
-                <p class="property-specs">Address Number Coming Soon</p>
-                <p class="property-price">Price TBD</p>
                 
                 
             </div>
@@ -817,62 +851,60 @@
         var map = L.map('map', { scrollWheelZoom: false }).setView([36.1200, -86.8000], 11);
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { attribution: '', maxZoom: 19 }).addTo(map);
         var properties = [
-            { lat: 36.095, lng: -86.85, title: '1211 Jefferson Davis', details: '1.24 AC | Pool | Details Coming Soon' },
-            { lat: 36.1008387, lng: -86.8433365, title: '4406 Sunnybrook Dr', details: '1.07 AC | Pool | Details Coming Soon' },
-            { lat: 36.0175939, lng: -86.775574, title: '515 Shenandoah Dr', details: '1.23 AC | Pool | Details Coming Soon' },
-            { lat: 36.1287677, lng: -86.876507, title: '6008 Elizabethan Dr', details: '1.46 AC | Pool | Details Coming Soon' },
-            { lat: 36.1265122, lng: -86.8886001, title: '750 Templeton Dr', details: '.97 AC | Pool | Details Coming Soon' },
-            { lat: 36.0059072, lng: -86.7802478, title: '804 Wilson Pike', details: '1.66 AC | Pool | Details Coming Soon' },
-            { lat: 36.0547651, lng: -86.7574621, title: '840 Brentview Dr', details: '1.05 AC | Pool | Details Coming Soon' },
-            { lat: 36.1138, lng: -86.7963, title: '1413 Clifton Ln', details: '4 BD | 4 BA | 3,050 SF | 2 Car Garage' },
-            { lat: 36.1223, lng: -86.7867, title: '1001 Halcyon', details: '4 BD | 4 BA | 5,000 SF | .17 AC | DADU' },
+            { lat: 36.1230522, lng: -86.8998741, title: '714 Shawnee Dr', details: '5 BD | 6.1 BA | 5,445 SF | 1.29 AC | Pool' },
+            { lat: 36.1008387, lng: -86.8433365, title: '4406 Sunnybrook Dr', details: '10,000+/- SF | 1.07 AC | Pool' },
+            { lat: 36.1287677, lng: -86.876507, title: '6008 Elizabethan Dr', details: '5 BD | 9 BA | 8,543 SF | 1.46 AC | Pool' },
             { lat: 36.1268, lng: -86.8456, title: '610 Westboro Dr', details: '4 BD | 4.5 BA | 3,500+ SF | .31 AC' },
-            { lat: 36.302, lng: -86.8522, title: '1020 Bison Ridge', details: '5.01 AC | Details Coming Soon' },
-            { lat: 36.0326, lng: -86.7828, title: '1211 Carl Seyfert Memorial Dr', details: '1.28 AC | Pool | Details Coming Soon' },
-            { lat: 36.105428, lng: -86.80129, title: '1600 Burton Ave', details: 'Pool | Details Coming Soon' },
-            { lat: 35.9251, lng: -86.8688, title: '2630 Clayton Arnold Rd', details: '2.4 AC | Pool | Details Coming Soon' },
-            { lat: 36.1136622, lng: -86.8780013, title: '6052 Bresslyn Rd', details: '1.7 AC | Pool | Details Coming Soon' },
-            { lat: 36.1258974, lng: -86.8882568, title: '738 Templeton Dr', details: '.97 AC | Pool | Details Coming Soon' },
-            { lat: 36.1304, lng: -86.7851, title: '940 S Douglas Ave', details: '4 BD | 4 BA | 5,000 SF | .25 AC | 3 Car Garage | DADU' },
+            { lat: 36.1265122, lng: -86.8886001, title: '750 Templeton Dr', details: '6 BD | 5.3 BA | 5,474 SF | .97 AC | Pool' },
+            { lat: 36.0547651, lng: -86.7574621, title: '840 Brentview Dr', details: '6 BD | 8 BA | 7,450 SF | 1.05 AC | Pool' },
+            { lat: 36.1234567, lng: -86.9054873, title: '1004 Rodney Dr', details: '5 BD | 5.1 BA | 5,000 SF | .5 AC | Pool' },
+            { lat: 36.1236972, lng: -86.9054689, title: '1006 Rodney Dr', details: '5 BD | 5.1 BA | 5,000 SF | .5 AC | Pool' },
+            { lat: 36.1138, lng: -86.7963, title: '1413 Clifton Ln', details: '4 BD | 4 BA | 3,050 SF | 2 Car Garage' },
+            { lat: 36.1000403, lng: -86.8133531, title: '2022 Galbraith Dr', details: '4 BD | 4.2 BA | 5,321 SF | .34 AC' },
+            { lat: 35.872, lng: -86.6722, title: '2495 Deer Meadow Ln', details: '3 BD | 1.1 BA | 3,000 SF | 8.79 AC' },
+            { lat: 36.1223, lng: -86.7867, title: '1001 Halcyon', details: '4 BD | 4 BA | 5,000 SF | .17 AC | DADU' },
+            { lat: 36.135881, lng: -86.7826067, title: '1819 Elliott Ave', details: '4 BD | 3.2 BA | 2,300 SF | .27 AC | Pool' },
+            { lat: 36.123353, lng: -86.7822497, title: '813 Montrose Ave', details: '5 BD | 5.1 BA | 5,000+ SF | .34 AC | Pool' },
             { lat: 36.1456, lng: -86.7835, title: '1006A Southside Ave', details: '4 BD | 3.2 BA | 3,648 SF | 2 Car Garage' },
             { lat: 36.1454, lng: -86.7833, title: '1006B Southside Ave', details: '4 BD | 3.2 BA | 3,648 SF | 2 Car Garage' },
+            { lat: 36.302, lng: -86.8522, title: '1020 Bison Ridge', details: '4 BD | 4.2 BA | 4,310 SF | 5.01 AC | Gated' },
+            { lat: 36.1422917, lng: -86.8314084, title: '120 39th Ave N', details: '5 BD | 7 BA | 4,610 SF | .18 AC | DADU' },
+            { lat: 36.0326, lng: -86.7828, title: '1211 Carl Seyfert Memorial Dr', details: '6 BD | 6.2 BA | 7,400 SF | 1.28 AC | Pool' },
+            { lat: 36.105428, lng: -86.80129, title: '1600 Burton Ave', details: '5 BD | 5.2 BA | 6,603 SF | Pool' },
+            { lat: 35.9251, lng: -86.8688, title: '2630 Clayton Arnold Rd', details: '5 BD | 5.2 BA | 7,000 SF | 2.4 AC | Pool' },
+            { lat: 36.1162829, lng: -86.8044171, title: '3433 Stokesmont Rd', details: '5 BD | 5.1 BA | 5,831 SF | .23 AC' },
+            { lat: 36.1136622, lng: -86.8780013, title: '6052 Bresslyn Rd', details: '12,000+/- SF | 1.7 AC | Pool' },
+            { lat: 36.1258974, lng: -86.8882568, title: '738 Templeton Dr', details: '5 BD | 5.3 BA | 5,796 SF | .97 AC | Pool' },
+            { lat: 36.1304, lng: -86.7851, title: '940 S Douglas Ave', details: '4 BD | 4 BA | 5,000 SF | .25 AC | 3 Car Garage | DADU' },
+            { lat: 36.0412349, lng: -86.9510985, title: '6397 Temple Rd', details: '5 BD | 5 BA | 6,500 SF | 4.35 AC | Pool' },
+            { lat: 36.1313075, lng: -86.8833779, title: '832 Brook Hollow Rd', details: '5 BD | 5.2 BA | 6,700 SF | 4.35 AC | Pool' },
             { lat: 36.1141, lng: -86.7924, title: '1200 Clifton Ln', details: '4 BD | 4.2 BA | 4,090 SF | .18 AC | Primary on Main | P' },
             { lat: 36.1141, lng: -86.7924, title: '1202 Clifton Ln', details: '4 BD | 4.2 BA | 4,090 SF | .18 AC | Primary on Main | P' },
             { lat: 36.1116246, lng: -86.8762942, title: '322 Gun Club Rd', details: '1.46 AC | Pool | Details Coming Soon' },
             { lat: 36.0906, lng: -86.7906, title: '4424A Lealand Ln', details: '4 BD | 5.1 BA | 4,399 SF | .23 AC | 2 Car Garage' },
             { lat: 36.0906, lng: -86.7906, title: '4424B Lealand Ln', details: '4 BD | 5.1 BA | 4,346 SF | .23 AC | 2 Car Garage' },
-            { lat: 36.1143137, lng: -86.8713662, title: '6036 Jocelyn Hollow Rd', details: '1.6 AC | Pool | Details Coming Soon' },
+            { lat: 36.1143137, lng: -86.8713662, title: '6036 Jocelyn Hollow Rd', details: '12,000+/- SF | 1.6 AC | Pool' },
             { lat: 36.1199, lng: -86.7845, title: '915 Kirkwood Ave', details: 'Historical Remodel | 9,000+ SF | .5 AC | 3 Car Garage |' },
             { lat: 36.11, lng: -86.7887, title: '1010 Draughon Ave', details: '5 BD | 5,200 SF | Pool' },
             { lat: 36.114, lng: -86.7956, title: '1306 Clifton Ln', details: '4 BD | 4.1 BA | 3,895 SF | .17 AC | 2 Car Garage | Spa' },
             { lat: 36.114, lng: -86.7956, title: '1308 Clifton Ln', details: '4 BD | 4.1 BA | 3,923 SF | .17 AC | 2 Car Garage | Pool' },
-            { lat: 36.085, lng: -86.875, title: '9005 Oden Ct', details: '1.06 AC | Pool | Details Coming Soon' },
-            { lat: 36.1234567, lng: -86.9054873, title: '1004 Rodney Dr', details: 'Details Coming Soon' },
-            { lat: 36.1236972, lng: -86.9054689, title: '1006 Rodney Dr', details: 'Details Coming Soon' },
-            { lat: 36.135881, lng: -86.7826067, title: '1819 Elliott Ave', details: '.27 AC | Pool | Details Coming Soon' },
-            { lat: 36.1000403, lng: -86.8133531, title: '2022 Galbraith Dr', details: '.34 AC | Details Coming Soon' },
-            { lat: 35.872, lng: -86.6722, title: '2495 Deer Meadow Ln', details: '8.79 AC | Details Coming Soon' },
-            { lat: 36.1162829, lng: -86.8044171, title: '3433 Stokesmont Rd', details: '.23 AC | Details Coming Soon' },
-            { lat: 36.0979611, lng: -86.8707768, title: '6011 Don Allen Ave', details: '.5 AC | Pool | Details Coming Soon' },
-            { lat: 36.0412349, lng: -86.9510985, title: '6397 Temple Rd', details: '4.35 AC | Pool | Details Coming Soon' },
-            { lat: 36.1230522, lng: -86.8998741, title: '714 Shawnee Dr', details: '1.29 AC | Pool | Details Coming Soon' },
-            { lat: 36.123353, lng: -86.7822497, title: '813 Montrose Ave', details: '.34 AC | Pool | Details Coming Soon' },
-            { lat: 36.1313075, lng: -86.8833779, title: '832 Brook Hollow Rd', details: '4.35 AC | Pool | Details Coming Soon' },
-            { lat: 36.1112845, lng: -86.8753598, title: '316 Gun Club Rd', details: '1.01 AC | Pool | Details Coming Soon' },
-            { lat: 36.115693, lng: -86.827539, title: '3604 Woodmont Blvd', details: '.36 AC | Details Coming Soon' },
+            { lat: 36.0979611, lng: -86.8707768, title: '6011 Don Allen Ave', details: '5 BD | 6.2 BA | 5,000+ SF | .5 AC | Pool' },
+            { lat: 36.1294871, lng: -86.8589082, title: '83 Brookwood Ter', details: '4 BD | 4.5 BA | 4,363 SF | .25 AC' },
+            { lat: 36.085, lng: -86.875, title: '9005 Oden Ct', details: '6 BD | 7.2 BA | 7,000 SF | 1.06 AC | Pool' },
+            { lat: 36.1112845, lng: -86.8753598, title: '316 Gun Club Rd', details: '12,000+ SF | 1.01 AC | Pool' },
+            { lat: 36.115693, lng: -86.827539, title: '3604 Woodmont Blvd', details: '5 BD | 4.2 BA | 4,463 SF | .36 AC' },
             { lat: 36.1205138, lng: -86.8964965, title: '708 Clematis Dr', details: '.94 AC | Details Coming Soon' },
-            { lat: 36.109, lng: -86.8088, title: '3724 Benham Ave', details: '5 BD | 6 FB + 1 HB | 6,369 SF | 3 Car Garage | Pool | G' },
+            { lat: 36.095, lng: -86.85, title: '1211 Jefferson Davis', details: '6 BD | 5.3 BA | 7,600 SF | 1.24 AC | Pool' },
+            { lat: 36.0175939, lng: -86.775574, title: '515 Shenandoah Dr', details: '6 BD | 5.3 BA | 8,000 SF | 1.23 AC | Pool' },
+            { lat: 36.0059072, lng: -86.7802478, title: '804 Wilson Pike', details: '6 BD | 5.3 BA | 7,300 SF | 1.66 AC | Pool' },
             { lat: 36.1223, lng: -86.7858, title: '1115 Halcyon', details: 'Details Coming Soon' },
             { lat: 36.1223, lng: -86.7858, title: '1117 Halcyon', details: 'Details Coming Soon' },
+            { lat: 36.109, lng: -86.8088, title: '3724 Benham Ave', details: '5 BD | 6 FB + 1 HB | 6,369 SF | 3 Car Garage | Pool | G' },
             { lat: 36.1235, lng: -86.7883, title: '1109 Montrose', details: 'Details Coming Soon' },
             { lat: 36.0995, lng: -86.8698, title: '111 Page Rd', details: '5 BD | 6 FB + 2 HB | 7,215 SF | 3 Car Garage | Office' },
-            { lat: 36.1422917, lng: -86.8314084, title: '120 39th Ave N', details: 'Details Coming Soon' },
             { lat: 36.0944, lng: -86.8734, title: '126 Taggart Ave', details: '5 BD | 5 FB + 2 HB | 5,659 SF | .5 AC | 3 Car Garage' },
             { lat: 36.0928, lng: -86.8694, title: '220 Heady Dr', details: '5 BD | 2 HB | 6,219 SF | .5 AC | 3 Car Garage | Library' },
             { lat: 36.1091, lng: -86.8087, title: '3720 Benham Ave', details: '5 BD | 6 FB + 1 HB | 6,369 SF | 3 Car Garage | Pool | G' },
-            { lat: 36.1938413, lng: -86.8429174, title: '4546 Cedar Grove Rd', details: '4 AC | Details Coming Soon' },
-            { lat: 36.1600723, lng: -86.8438804, title: '4700 Kentucky Ave', details: 'Details Coming Soon' },
-            { lat: 36.1294871, lng: -86.8589082, title: '83 Brookwood Ter', details: 'Details Coming Soon' },
             { lat: 36.1233, lng: -86.7845, title: '928 Montrose Ave', details: '3 BD | 2 BA | 2,600 SF' }
         ];
         var whiteIcon = L.divIcon({ className: 'custom-pin', html: '<div style="width:14px;height:14px;background:#fff;border:2px solid #fff;border-radius:50%;box-shadow:0 0 8px rgba(255,255,255,0.5);"></div>', iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -10] });
