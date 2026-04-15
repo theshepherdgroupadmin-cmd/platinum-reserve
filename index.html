@@ -987,7 +987,7 @@
             { lat: 36.1233, lng: -86.7845, title: '928 Montrose Ave', details: '3 BD | 2 BA | 2,600 SF' }
         ];
         var whiteIcon = L.divIcon({ className: 'custom-pin', html: '<div style="width:14px;height:14px;background:#fff;border:2px solid #fff;border-radius:50%;box-shadow:0 0 8px rgba(255,255,255,0.5);"></div>', iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -10] });
-        properties.forEach(function(p) { L.marker([p.lat, p.lng], { icon: whiteIcon }).addTo(map).bindPopup('<div class="map-popup"><strong>' + p.title + '</strong>' + p.details + '</div>'); });
+        properties.forEach(function(p) { p.marker = L.marker([p.lat, p.lng], { icon: whiteIcon }).addTo(map).bindPopup('<div class="map-popup"><strong>' + p.title + '</strong>' + p.details + '</div>'); });
         var group = L.featureGroup(properties.map(function(p) { return L.marker([p.lat, p.lng]); }));
         map.fitBounds(group.getBounds().pad(0.15));
 
@@ -1002,6 +1002,8 @@
                 var specs = (card.querySelector('.property-specs') || {}).textContent || '';
                 var price = (card.querySelector('.property-price') || {}).textContent || '';
                 var addr = (card.querySelector('.property-address') || {}).textContent || '';
+                var titleEl = card.querySelector('.property-title');
+                var title = titleEl ? titleEl.textContent.trim() : '';
 
                 // Beds
                 var bedMatch = specs.match(/(\d+)\s*BD/i);
@@ -1036,7 +1038,7 @@
                 var area = '';
                 var areaMatch = card.innerHTML.match(/Area:\s*([^<\n]+)/i);
                 if (areaMatch) area = areaMatch[1].trim();
-                return { el: card, beds: beds, baths: baths, sqft: sqft, price: priceNum, city: city, area: area };
+                return { el: card, title: title, beds: beds, baths: baths, sqft: sqft, price: priceNum, city: city, area: area };
             });
 
             // Populate city dropdown
@@ -1085,6 +1087,12 @@
                     if (fArea && c.area !== fArea) show = false;
                     c.el.style.display = show ? '' : 'none';
                     if (show) visible++;
+                    // Toggle matching map marker
+                    var match = properties.find(function(p) { return p.title === c.title; });
+                    if (match && match.marker) {
+                        if (show) { if (!map.hasLayer(match.marker)) map.addLayer(match.marker); }
+                        else { if (map.hasLayer(match.marker)) map.removeLayer(match.marker); }
+                    }
                 });
                 countEl.textContent = 'Showing ' + visible + ' of ' + cardData.length + ' properties';
             }
