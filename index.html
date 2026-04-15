@@ -1192,7 +1192,7 @@
                 var cityMatch = addr.match(/,\s*([A-Za-z ]+?),\s*TN/);
                 if (cityMatch) city = cityMatch[1].trim();
 
-                // Area — look for "Area: XYZ" in italic note or data-area attribute
+                // Neighborhood — look for italic note in card body
                 var area = '';
                 var areaMatch = card.innerHTML.match(/Area:\s*([^<\n]+)/i);
                 if (areaMatch) area = areaMatch[1].trim();
