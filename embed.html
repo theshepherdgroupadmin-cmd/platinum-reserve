@@ -1387,7 +1387,7 @@
         var whiteIcon = L.divIcon({ className: 'custom-pin', html: '<div style="width:14px;height:14px;background:#fff;border:2px solid #fff;border-radius:50%;box-shadow:0 0 8px rgba(255,255,255,0.5);"></div>', iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -10] });
         properties.forEach(function(p) { p.marker = L.marker([p.lat, p.lng], { icon: whiteIcon }).addTo(map).bindPopup('<div class="map-popup"><strong>' + p.title + '</strong>' + p.details + '</div>'); });
         var group = L.featureGroup(properties.map(function(p) { return L.marker([p.lat, p.lng]); }));
-        map.fitBounds(group.getBounds().pad(0.05), { maxZoom: 11 });
+        map.setView([36.12, -86.83], 12);
 
         // === Property Filter ===
         (function() {
